@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;  /* Assicura che l'html e il body occupino l'intera altezza della finestra */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  /* Imposta la direzione del flex container come colonna */
+    width: 100%;
+    background-color: black;  /* Assicura che il body prenda la larghezza completa del viewport */
+}
+
+header, #container, #button-container {
+    width: 100%;  /* Larghezza al 100% del viewport per ciascun div */
+}
+
+header {
+    background-color: black;
+    color:white
+    height: 16.67%;  /* 2/12 dell'altezza totale */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#container {
+    overflow: hidden;
+    background-color: #e9ecef;
+    height: 66.67%;  /* 8/12 dell'altezza totale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative; 
+    background-color: black; /* Aggiunto per supportare la posizione assoluta dei box */
+}
+
+#button-container {
+    background-color: black;
+    height: 16.67%;  /* 2/12 dell'altezza totale */
+        display: none; /* Nasconde il contenitore dei bottoni all'inizio */
+            align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 80vw;  /* 80% della larghezza del viewport */
+    height: 80vw;  /* stesso valore della larghezza per mantenere l'aspetto quadrato */
+    position: absolute;
+    transition: transform 0.1s ease;
+}
+
+#box1 {
+    background-image: url('1.png');
+    transform: translate(120px, 147px);
+    background-size: cover;
+}
+
+#box2 {
+    background-image: url('2.png');
+    background-size: cover;
+    transform: translate(60px, -220.5px);
+}
+
+#box3 {
+    background-image: url('3.png');
+    background-size: cover;
+    transform: translate(-180px, 73.5px);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: rgb(192, 48, 48);
+    color: white;
+    border: none;
+}
