@@ -54,6 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let buttonDisplayed = false;
 
+    function resetCoordinates() {
+        applyMovement('box1', 0, 0, 0);
+        applyMovement('box2', 0, 0, 0);
+        applyMovement('box3', 0, 0, 0);
+    }
+
     function checkAllZero() {
         const allInRange = Object.values(movements).every(coords => 
             coords.x.toFixed(2) >= 0.00 && coords.x.toFixed(2) <= 0.10 &&
@@ -62,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
         );
         if (allInRange) {
             buttonDisplayed = true;
+            stopDrag();
+            
         }
         if (buttonDisplayed) {
             buttonContainer.style.display = 'block'; // Mantiene visibile il button-container
